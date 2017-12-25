@@ -1,0 +1,209 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-family: comic sans ms; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.bodyTitle {
+  margin: 20px 30px 20px 30px;
+  text-align: center;
+  font-size: 35px;
+  color: #2C7; }
+
+.butSuccess {
+  font-size: 20px;
+  margin: 10px 20px;
+  background-color: #2C7;
+  color: #fff;
+  border: 0.5px solid #2C7;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-shadow: rgba(255, 255, 255, 0.5) 1px 1px, rgba(100, 100, 100, 0.3) 3px 7px 3px;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 70%), linear-gradient(to right, white, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 0.3)), linear-gradient(to right, #dfbeaa, rgba(255, 255, 255, 0.9) 45%, rgba(223, 190, 170, 0.5)), linear-gradient(to right, #dfbeaa, white 45%, rgba(223, 190, 170, 0.5));
+  background-repeat: no-repeat;
+  background-size: 200% 100%, auto, 100% 1px, 100% 1px, 100% 1px, 100% 1px;
+  background-position: 200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+  box-shadow: rgba(0, 0, 0, 0.5) 3px 10px 10px -10px; }
+  .butSuccess:hover {
+    transition: .5s linear;
+    background-position: -200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px); }
+  .butSuccess:active, .butSuccess:focus {
+    outline: 0;
+    outline-offset: 0; }
+
+.butDanger {
+  font-size: 20px;
+  margin: 10px 20px;
+  background-color: #E15;
+  color: #fff;
+  border: 0.5px solid #E15;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-shadow: rgba(255, 255, 255, 0.5) 1px 1px, rgba(100, 100, 100, 0.3) 3px 7px 3px;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 70%), linear-gradient(to right, white, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 0.3)), linear-gradient(to right, #dfbeaa, rgba(255, 255, 255, 0.9) 45%, rgba(223, 190, 170, 0.5)), linear-gradient(to right, #dfbeaa, white 45%, rgba(223, 190, 170, 0.5));
+  background-repeat: no-repeat;
+  background-size: 200% 100%, auto, 100% 1px, 100% 1px, 100% 1px, 100% 1px;
+  background-position: 200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+  box-shadow: rgba(0, 0, 0, 0.5) 3px 10px 10px -10px; }
+  .butDanger:hover {
+    transition: .5s linear;
+    background-position: -200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px); }
+  .butDanger:active, .butDanger:focus {
+    outline: 0;
+    outline-offset: 0; }
+
+#formData {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #formData .ng-valid {
+    border: 1.5px solid #2C7;
+    color: #2C7; }
+  #formData .ng-invalid {
+    border: 1.5px solid #E15; }
+  #formData p {
+    font-size: 20px;
+    padding: 5px 20px;
+    color: #1AB; }
+  #formData input {
+    font-size: 20px;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    width: 80%;
+    height: 30px;
+    color: #E15; }
+    #formData input:focus {
+      outline: 0;
+      outline-offset: 0;
+      border: 1.5px solid #1AB; }
+    #formData input::placeholder {
+      color: #E15;
+      font-size: 18px; }
+  #formData select {
+    font-size: 20px;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    width: 80%;
+    height: 30px;
+    height: 44px;
+    width: 88%;
+    color: #E15; }
+    #formData select:focus {
+      outline: 0;
+      outline-offset: 0;
+      border: 1.5px solid #1AB; }
+
+#GlobalAllBox {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #GlobalAllBox .allBlock {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    #GlobalAllBox .allBlock p {
+      font-size: 20px;
+      color: #2C7; }
+    #GlobalAllBox .allBlock .allUlInBox {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      min-height: 50px; }
+      #GlobalAllBox .allBlock .allUlInBox .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        min-width: 160px;
+        max-width: 250px;
+        border: 1px solid #2C7;
+        background-color: #fff;
+        margin: 10px;
+        border-radius: 10px;
+        text-align: center; }
+        #GlobalAllBox .allBlock .allUlInBox .box li {
+          color: #2C7;
+          width: 95%;
+          display: flex;
+          flex-direction: row;
+          justify-content: center; }
+          #GlobalAllBox .allBlock .allUlInBox .box li i {
+            cursor: pointer;
+            padding: 5px;
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around; }
+            #GlobalAllBox .allBlock .allUlInBox .box li i:hover {
+              color: #157249; }
+        #GlobalAllBox .allBlock .allUlInBox .box:hover {
+          transition: 2s;
+          transform: scale(1.2, 1.2);
+          background-color: #2C7; }
+          #GlobalAllBox .allBlock .allUlInBox .box:hover li {
+            color: #fff; }
+  #GlobalAllBox #changeBox {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2C7;
+    color: #fff;
+    padding: 5px 15px 15px 15px;
+    border-radius: 10px;
+    font-size: 20px; }
+    #GlobalAllBox #changeBox p {
+      padding: 5px; }
+    #GlobalAllBox #changeBox input {
+      font-size: 20px;
+      padding: 5px 5px 5px 10px;
+      width: 90%;
+      color: #2C7;
+      border-radius: 5px; }
+      #GlobalAllBox #changeBox input::placeholder {
+        color: #2C7; }
+    #GlobalAllBox #changeBox select {
+      font-size: 20px;
+      width: 98%;
+      padding: 5px 5px 5px 10px;
+      color: #2C7;
+      border-radius: 5px; }
+    #GlobalAllBox #changeBox button {
+      font-size: 20px;
+      margin: 10px 20px;
+      background-color: #2C7;
+      color: #fff;
+      border: 0.5px solid #2C7;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-shadow: rgba(255, 255, 255, 0.5) 1px 1px, rgba(100, 100, 100, 0.3) 3px 7px 3px;
+      background-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 70%), linear-gradient(to right, white, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 0.3)), linear-gradient(to right, #dfbeaa, rgba(255, 255, 255, 0.9) 45%, rgba(223, 190, 170, 0.5)), linear-gradient(to right, #dfbeaa, white 45%, rgba(223, 190, 170, 0.5));
+      background-repeat: no-repeat;
+      background-size: 200% 100%, auto, 100% 1px, 100% 1px, 100% 1px, 100% 1px;
+      background-position: 200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+      box-shadow: rgba(0, 0, 0, 0.5) 3px 10px 10px -10px;
+      width: 80%;
+      margin: 15px 0 5px;
+      font-size: 25px; }
+      #GlobalAllBox #changeBox button:hover {
+        transition: .5s linear;
+        background-position: -200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px); }
+      #GlobalAllBox #changeBox button:active, #GlobalAllBox #changeBox button:focus {
+        outline: 0;
+        outline-offset: 0; }
+
+/*# sourceMappingURL=style.css.map */

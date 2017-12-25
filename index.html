@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" >
+<head>
+	<meta charset="UTF-8">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+	<link rel="stylesheet" href="fonts/font-awesome-4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body ng-controller="mainCtrl as mainCtrl">
+
+
+	<h1 ng-click="blabla()" class="bodyTitle">Hello my to do list with Factory :)</h1>
+	<button class="butSuccess" ng-show="!showCreateNewBox" ng-hide="aaa"="!showCreateNewBox" ng-click="createNewBox()">Click for create new box</button>
+
+
+	<form name="forma" novalidate ng-show="showForm" id="formData">
+		<button type="button" ng-click="comeBack()" class="butDanger">Come back</button>
+		<p>add name</p>
+		<input ng-model="newBox.name" type="text" placeholder="write please..." required>
+		<p>add property</p>
+		<input ng-model="newBox.property" type="text" placeholder="write please..." required>
+		<p>change data create</p>
+		<input ng-model="newBox.dataCreate" type="date" required>
+		<p>choose priority</p>
+		<select ng-model="newBox.priority" required>
+			<option>low</option>
+			<option>middle</option>
+			<option>high</option>
+		</select>
+		<button type="button" ng-show="forma.$valid" class="butSuccess" ng-click="addNewBox(newBox)">Click for add new box</button>
+	</form>
+
+
+
+	<div ng-show="!showGlobalAllBox" id="GlobalAllBox" >
+
+		<div ng-show="!showAllBlock" class="allBlock">
+			<p>{{'begin' | uppercase}}</p>
+			<div class="allUlInBox">
+				<ul class="box" ng-repeat="box in mainCtrl.getBoxes() | filter:box.status = 'begin' | orderBy: 'priorityNumber' track by $index" >
+					<this-box></this-box>
+				</ul>
+			</div>
+		</div>
+
+		<div ng-show="!showAllBlock" class="allBlock">
+			<p>{{'process' | uppercase}}</p>
+			<div class="allUlInBox">
+				<ul class="box" ng-repeat="box in mainCtrl.getBoxes() | filter:box.status = 'process' | orderBy: 'priorityNumber' track by $index" >
+					<this-box></this-box>
+				</ul>
+			</div>
+		</div>
+
+		<div ng-show="!showAllBlock" class="allBlock">
+			<p>{{'working to finish' | uppercase}}</p>
+			<div class="allUlInBox">
+				<ul class="box" ng-repeat="box in mainCtrl.getBoxes() | filter:box.status = 'working' | orderBy: 'priorityNumber' track by $index" >
+					<this-box></this-box>
+				</ul>
+			</div>
+		</div>
+
+		<div ng-show="!showAllBlock" class="allBlock">
+			<p>{{'end' | uppercase}}</p>
+			<div class="allUlInBox">
+				<ul class="box" ng-repeat="box in mainCtrl.getBoxes() | filter:box.status = 'end' | orderBy: 'priorityNumber' track by $index" >
+					<this-box></this-box>
+				</ul>
+			</div>
+		</div>
+
+
+
+
+		<form name="formChangeBox" novalidate ng-show="showChangeBox" id="changeBox">
+			<h1>Change this box</h1>
+			<p>Name :</p>
+			<input ng-model="changeBoxy.name" type="text" placeholder="write please..." required>
+			<p>Property :</p>
+			<input ng-model="changeBoxy.property" type="text" placeholder="write please..." required>
+			<p>Priority :</p>
+			<select ng-model="changeBoxy.priority" required>
+				<option>low</option>
+				<option>middle</option>
+				<option>high</option>
+			</select>
+			<p>Status :</p>
+			<select ng-model="changeBoxy.status" required>
+				<option>begin</option>
+				<option>process</option>
+				<option>working</option>
+				<option>end</option>
+			</select>
+			<button ng-show="formChangeBox.$valid" ng-click="saveChangeForBox()">save</button>
+		</form>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="js/app.js"></script>
+	<script src="js/directive/box.js"></script>
+	<script src="js/controller/mainCtrl.js"></script>
+	<script src="js/factory/mainFactory.js"></script>
+
+</body>
+</html>

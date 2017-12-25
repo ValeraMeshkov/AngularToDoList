@@ -1,0 +1,168 @@
+@import "variables";
+@import "mixin";
+
+*{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-family: comic sans ms;
+}
+
+body{
+		@include df_fdc_tac
+}
+
+
+.bodyTitle{
+	margin: 20px 30px 20px 30px;
+	text-align: center;
+	font-size: $mainFontSizeBig;
+	color: $mainClrSuccess;
+}
+
+.butSuccess{
+	@include butSuccess;
+}
+
+.butDanger{
+	@include butDanger;
+}
+
+#formData{
+	@include df_fdc_tac;
+
+	.ng-valid{
+		border: 1.5px solid $mainClrSuccess;
+		color: $mainClrSuccess
+	}
+	.ng-invalid{
+		border: 1.5px solid $mainClrDanger;
+	}
+
+	p{
+		font-size: $mainFontSizeMiddle;
+		padding: 5px 20px;
+		color: $mainClrInfo;
+	}
+
+	input{
+		@include inputForm;
+		color: $mainClrDanger;
+		&::placeholder{
+			color: $mainClrDanger;
+			font-size: 18px;
+		}
+	}
+
+
+	select{
+		@include inputForm;
+		height: 44px;
+		width: 88%;
+		color: $mainClrDanger;
+	}
+}
+
+
+#GlobalAllBox{
+	width: 90%;
+	@include df_fdc_tac;
+
+	.allBlock{
+		width: 100%;
+		@include df_fdc_tac;
+
+		p{
+			font-size: 20px;
+			color: $mainClrSuccess;
+		}
+
+		.allUlInBox{
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			flex-wrap: wrap;
+			min-height: 50px;
+
+
+			.box{
+				@include df_fdc_tac;
+				justify-content: space-around;
+				min-width: 160px;
+				max-width: 250px;
+				border: 1px solid $mainClrSuccess;
+				background-color: $mainClrOne;
+				margin: 10px;
+				border-radius:10px;
+				text-align: center;
+
+
+				li{
+					color: $mainClrSuccess;
+					width:95%;
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					i{
+						cursor: pointer;
+						padding: 5px;
+						width: 90%;
+						display: flex;
+						flex-direction: row;
+						justify-content: space-around;
+						&:hover{
+							color: #157249;
+						}
+					}
+				}
+
+				&:hover{
+					transition: 2s;
+					transform: scale(1.2,1.2);
+					background-color: $mainClrSuccess;
+					li{
+						color: $mainClrOne;
+					}
+				}
+			}
+		}
+	}
+
+	#changeBox{
+		margin-top: 40px;
+		@include df_fdc_tac;
+		background-color: $mainClrSuccess;
+		color: $mainClrOne;
+		padding: 5px 15px 15px 15px;
+		border-radius: 10px;
+		font-size: 20px;
+		p{
+			padding: 5px;
+		}
+		input{
+			font-size: 20px;
+			padding: 5px 5px 5px 10px;
+			width: 90%;
+			color: $mainClrSuccess;
+			border-radius: 5px;
+			&::placeholder{
+				color: $mainClrSuccess;
+			}
+		}
+		select{
+			font-size: 20px;
+			width: 98%;
+			padding: 5px 5px 5px 10px;
+			color: $mainClrSuccess;
+			border-radius: 5px;
+		}
+		button{
+			@include butSuccess;
+			width: 80%;
+			margin: 15px 0 5px;
+			font-size: 25px;
+		};
+	}
+
+}
